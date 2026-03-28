@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ─── */
+:root {
+  --card-shadow:
+    rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
+    rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.04) 0px 6px 6px -3px,
+    rgba(14, 63, 126, 0.04) 0px 12px 12px -6px,
+    rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+  --nav-shadow:
+    rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.05) 0px 4px 8px -2px,
+    rgba(14, 63, 126, 0.04) 0px 16px 32px -8px;
+}
+
+/* ─── Base Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #fafaf8;
+  color: #1a1510;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ─── Card Shadow Utility ─── */
+.card-shadow {
+  box-shadow: var(--card-shadow);
+}
+
+.nav-shadow {
+  box-shadow: var(--nav-shadow);
+}
+
+/* ─── Scroll Reveal: Fade + Scale ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ─── Blur-In: For Section Headings ─── */
+.blur-in-el {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(8px);
+  transition: opacity 0.8s ease-out,
+              filter 0.8s ease-out,
+              transform 0.8s ease-out;
+}
+.blur-in-el.visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}
+
+/* ─── Stagger Delays ─── */
+.delay-0   { transition-delay: 0ms; }
+.delay-80  { transition-delay: 80ms; }
+.delay-160 { transition-delay: 160ms; }
+.delay-240 { transition-delay: 240ms; }
+.delay-320 { transition-delay: 320ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-480 { transition-delay: 480ms; }
+.delay-560 { transition-delay: 560ms; }
+.delay-640 { transition-delay: 640ms; }
+
+/* ─── Testimonial Auto-Scroll ─── */
+.testimonial-col-down {
+  animation: scroll-down 38s linear infinite;
+}
+.testimonial-col-up {
+  animation: scroll-up 38s linear infinite;
+}
+.testimonial-col-down:hover,
+.testimonial-col-up:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-down {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes scroll-up {
+  0%   { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+/* ─── Text Balance Polyfill Hint ─── */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f0ebe3;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0b8b0;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6058;
+}
+
+/* ─── Selection Color ─── */
+::selection {
+  background: #e8f0eb;
+  color: #1e3d2e;
+}
+
+/* ─── Nav Active State ─── */
+.nav-scrolled {
+  background: rgba(250, 250, 248, 0.92) !important;
+  border-color: rgba(26, 21, 16, 0.1) !important;
+}
