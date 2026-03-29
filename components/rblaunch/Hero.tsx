@@ -32,7 +32,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1590579491624-f98f36d4c763?w=1920&q=80"
           alt="Trade professional on the job site"
           className="w-full h-full object-cover object-center"
         />
