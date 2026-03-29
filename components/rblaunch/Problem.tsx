@@ -138,22 +138,18 @@ export default function Problem() {
                   'rgba(14,63,126,0.04) 0px 0px 0px 1px, rgba(42,51,69,0.04) 0px 1px 1px -0.5px, rgba(42,51,70,0.04) 0px 3px 3px -1.5px, rgba(42,51,70,0.04) 0px 6px 6px -3px, rgba(14,63,126,0.04) 0px 12px 12px -6px, rgba(14,63,126,0.04) 0px 24px 24px -12px',
               }}
             >
-              <div className="flex items-start gap-5">
-                <div className="w-10 h-10 rounded-2xl bg-accent-light flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-10 h-10 rounded-2xl bg-accent-light flex items-center justify-center">
                   <PhoneOff size={18} className="text-accent" strokeWidth={1.75} />
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-start justify-between mb-2">
-                    <h3 className="font-playfair text-lg font-semibold text-foreground leading-snug">
-                      {problems[2].title}
-                    </h3>
-                    <span className="text-xs font-mono text-foreground-faint ml-4 mt-0.5">{problems[2].number}</span>
-                  </div>
-                  <p className="text-sm text-foreground-muted leading-relaxed font-light">
-                    {problems[2].body}
-                  </p>
-                </div>
+                <span className="text-xs font-mono text-foreground-faint">{problems[2].number}</span>
               </div>
+              <h3 className="font-playfair text-lg font-semibold text-foreground mb-2 leading-snug">
+                {problems[2].title}
+              </h3>
+              <p className="text-sm text-foreground-muted leading-relaxed font-light">
+                {problems[2].body}
+              </p>
             </div>
           </div>
         </div>
