@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { TrendingUp, CheckCircle2 } from 'lucide-react'
+import { TrendingUp, CheckCircle2, ExternalLink } from 'lucide-react'
 
 const roiRows = [
   { label: 'Average roofing job value', value: '~$9,500', highlight: false },
@@ -60,7 +60,7 @@ export default function Results() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-          {/* Case Study Card */}
+          {/* Client Transformation Card */}
           <div
             className="reveal bg-white rounded-3xl overflow-hidden"
             style={{
@@ -68,31 +68,72 @@ export default function Results() {
                 'rgba(14,63,126,0.04) 0px 0px 0px 1px, rgba(42,51,69,0.04) 0px 1px 1px -0.5px, rgba(42,51,70,0.04) 0px 3px 3px -1.5px, rgba(42,51,70,0.04) 0px 6px 6px -3px, rgba(14,63,126,0.04) 0px 12px 12px -6px, rgba(14,63,126,0.04) 0px 24px 24px -12px',
             }}
           >
-            {/* Image */}
-            <div className="relative h-52 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&q=80"
-                alt="Home inspection professional"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
-              <div className="absolute top-4 left-4">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] bg-white/90 text-foreground px-2.5 py-1 rounded-full">
-                  Case Study
-                </span>
+            {/* Website preview */}
+            <div className="relative bg-bg-deep overflow-hidden" style={{ height: '260px' }}>
+              {/* Browser chrome */}
+              <div className="bg-[#e8e4df] px-4 py-2.5 flex items-center gap-2 border-b border-[rgba(26,21,16,0.08)]">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
+                  <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
+                  <div className="w-3 h-3 rounded-full bg-[#28c840]" />
+                </div>
+                <div className="flex-1 bg-white/70 rounded-md px-3 py-1 text-xs text-foreground-muted font-mono ml-2">
+                  lasherinspections.com
+                </div>
+                <a
+                  href="https://lasherinspections.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground-muted hover:text-primary transition-colors"
+                >
+                  <ExternalLink size={13} />
+                </a>
               </div>
-              <div className="absolute bottom-4 left-5 right-5">
-                <p className="font-playfair text-xl font-semibold text-white leading-snug">
-                  Lasher Inspections
-                </p>
-                <p className="text-white/70 text-xs mt-0.5">
-                  Home Inspection · Brainerd Lakes Area, MN
-                </p>
+
+              {/* iFrame preview */}
+              <iframe
+                src="https://lasherinspections.com"
+                className="w-full border-0 pointer-events-none"
+                style={{
+                  height: '600px',
+                  transform: 'scale(0.36)',
+                  transformOrigin: 'top left',
+                  width: '277.78%',
+                }}
+                title="Lasher Inspections website"
+                loading="lazy"
+                sandbox="allow-same-origin"
+              />
+
+              {/* Overlay badge */}
+              <div className="absolute top-12 right-3">
+                <span className="text-xs font-semibold uppercase tracking-[0.15em] bg-primary text-white px-2.5 py-1 rounded-full">
+                  Client Site
+                </span>
               </div>
             </div>
 
             {/* Body */}
             <div className="p-7">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <p className="font-playfair text-lg font-semibold text-foreground">
+                    Lasher Inspections
+                  </p>
+                  <p className="text-xs text-foreground-muted mt-0.5">
+                    Home Inspection · Brainerd Lakes Area, MN
+                  </p>
+                </div>
+                <a
+                  href="https://lasherinspections.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-medium text-primary border border-primary/20 hover:bg-primary-light px-3 py-1.5 rounded-full transition-colors flex items-center gap-1"
+                >
+                  Visit site <ExternalLink size={11} />
+                </a>
+              </div>
+
               <div className="flex items-center gap-4 mb-5">
                 <div className="bg-primary-light rounded-2xl p-4 text-center flex-1">
                   <p className="font-playfair text-4xl font-semibold text-primary leading-none">
@@ -125,9 +166,7 @@ export default function Results() {
           </div>
 
           {/* ROI Calculator */}
-          <div
-            className="reveal delay-160 flex flex-col gap-5"
-          >
+          <div className="reveal delay-160 flex flex-col gap-5">
             <div
               className="bg-white rounded-3xl p-7 flex-1"
               style={{
@@ -150,13 +189,11 @@ export default function Results() {
               </div>
 
               <div className="space-y-2">
-                {roiRows.map((row, i) => (
+                {roiRows.map((row) => (
                   <div
                     key={row.label}
                     className={`flex items-center justify-between py-2.5 px-3 rounded-xl ${
-                      row.highlight
-                        ? 'bg-primary-light'
-                        : 'bg-bg-alt'
+                      row.highlight ? 'bg-primary-light' : 'bg-bg-alt'
                     }`}
                   >
                     <span className={`text-sm ${row.highlight ? 'font-medium text-primary' : 'text-foreground-muted font-light'}`}>
@@ -172,9 +209,7 @@ export default function Results() {
             </div>
 
             {/* Note card */}
-            <div
-              className="bg-accent-light border border-accent/15 rounded-3xl p-5"
-            >
+            <div className="bg-accent-light border border-accent/15 rounded-3xl p-5">
               <p className="text-sm text-foreground leading-relaxed">
                 This math works for HVAC, roofing, concrete, home inspection — any trade where your
                 average job value is over a few thousand dollars.{' '}
