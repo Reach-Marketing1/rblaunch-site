@@ -153,6 +153,21 @@ export default function Problem() {
             </div>
           </div>
         </div>
+
+        {/* CTA */}
+        <div className="reveal mt-12 text-center">
+          <p className="text-sm text-foreground-muted font-light mb-5">
+            All three are fixable. Most trade businesses see movement in the first two weeks.
+          </p>
+          <a
+            href="#offer"
+            className="group inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-medium text-sm px-7 py-3.5 rounded-full transition-all duration-300"
+            style={{ boxShadow: '0 2px 12px rgba(30,61,46,0.2)' }}
+          >
+            See How We Fix It
+            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+          </a>
+        </div>
       </div>
     </section>
   )
