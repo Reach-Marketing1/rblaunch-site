@@ -1,5 +1,7 @@
 'use client'
 
+import { LogoBadge } from './Logo'
+
 const footerLinks = {
   Services: [
     { label: 'Social Media Management', href: '#offer' },
@@ -81,9 +83,8 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <a href="#" className="inline-flex items-baseline gap-0.5 mb-4">
-              <span className="font-playfair text-2xl font-semibold text-foreground">RB</span>
-              <span className="font-playfair text-2xl font-semibold text-primary">Launch</span>
+            <a href="#" className="inline-flex items-center mb-4">
+              <LogoBadge size={52} />
             </a>
             <p className="text-sm text-foreground-muted font-light leading-relaxed mb-6 max-w-xs">
               You run the jobs.

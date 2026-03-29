@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { LogoBadge } from './Logo'
 
 const navLinks = [
   { label: 'The System', href: '#offer' },
@@ -55,13 +56,8 @@ export default function Navbar() {
 
             {/* Center — Logo (absolute) */}
             <div className="absolute left-1/2 -translate-x-1/2">
-              <a href="#" className="flex items-baseline gap-0.5">
-                <span className="font-playfair text-xl font-semibold tracking-tight text-foreground">
-                  RB
-                </span>
-                <span className="font-playfair text-xl font-semibold tracking-tight text-primary">
-                  Launch
-                </span>
+              <a href="#" className="flex items-center">
+                <LogoBadge size={44} />
               </a>
             </div>
 
