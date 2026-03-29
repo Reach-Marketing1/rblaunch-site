@@ -163,17 +163,27 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* 3-column scroll */}
-        <div className="relative h-[620px] overflow-hidden">
+        {/* Mobile: single scrolling column */}
+        <div className="relative h-[500px] overflow-hidden md:hidden">
+          <div className="absolute top-0 left-0 right-0 h-20 z-10 pointer-events-none bg-gradient-to-b from-bg-alt to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-20 z-10 pointer-events-none bg-gradient-to-t from-bg-alt to-transparent" />
+          <div className="testimonial-col-down">
+            {[...reviews, ...reviews].map((review, i) => (
+              <ReviewCard key={`mob-${i}`} review={review} />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: 3-column scroll */}
+        <div className="relative h-[620px] overflow-hidden hidden md:block">
           {/* Top gradient mask */}
           <div className="absolute top-0 left-0 right-0 h-28 z-10 pointer-events-none bg-gradient-to-b from-bg-alt to-transparent" />
           {/* Bottom gradient mask */}
           <div className="absolute bottom-0 left-0 right-0 h-28 z-10 pointer-events-none bg-gradient-to-t from-bg-alt to-transparent" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 h-full">
-
+          <div className="grid grid-cols-3 gap-5 h-full">
             {/* Column 1 — scrolls down */}
-            <div className="relative overflow-hidden hidden md:block">
+            <div className="relative overflow-hidden">
               <div className="testimonial-col-down">
                 {col1.map((review, i) => (
                   <ReviewCard key={`c1-${i}`} review={review} />
@@ -182,7 +192,7 @@ export default function Testimonials() {
             </div>
 
             {/* Column 2 — scrolls up */}
-            <div className="relative overflow-hidden hidden md:block">
+            <div className="relative overflow-hidden">
               <div className="testimonial-col-up">
                 {col2.map((review, i) => (
                   <ReviewCard key={`c2-${i}`} review={review} />
@@ -191,19 +201,10 @@ export default function Testimonials() {
             </div>
 
             {/* Column 3 — scrolls down */}
-            <div className="relative overflow-hidden hidden md:block">
+            <div className="relative overflow-hidden">
               <div className="testimonial-col-down">
                 {col3.map((review, i) => (
                   <ReviewCard key={`c3-${i}`} review={review} />
-                ))}
-              </div>
-            </div>
-
-            {/* Mobile: single column */}
-            <div className="md:hidden overflow-hidden">
-              <div className="testimonial-col-down">
-                {[...reviews, ...reviews].map((review, i) => (
-                  <ReviewCard key={`mob-${i}`} review={review} />
                 ))}
               </div>
             </div>

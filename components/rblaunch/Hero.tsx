@@ -54,7 +54,7 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="blur-in-hero font-playfair text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.08] text-balance text-foreground mb-6">
+          <h1 className="blur-in-hero font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.08] text-balance text-foreground mb-6">
             You run the jobs.{' '}
             <br />
             <em className="text-primary italic">We keep the calls coming.</em>

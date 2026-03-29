@@ -151,9 +151,9 @@ export default function Offer() {
         </div>
 
         {/* Category filter pill control */}
-        <div className="reveal mb-8 inline-flex">
+        <div className="reveal mb-8 w-full overflow-x-auto pb-1 -mb-1">
           <div
-            className="relative flex items-center bg-background rounded-full p-1 border border-[rgba(26,21,16,0.08)]"
+            className="relative flex items-center bg-background rounded-full p-1 border border-[rgba(26,21,16,0.08)] w-max"
             style={{ boxShadow: 'rgba(14,63,126,0.04) 0px 0px 0px 1px, rgba(42,51,70,0.04) 0px 2px 4px -1px' }}
           >
             {/* Sliding background pill */}

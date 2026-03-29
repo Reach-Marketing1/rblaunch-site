@@ -124,7 +124,7 @@ export default function CTABanner() {
             </div>
 
             {/* Mobile value props */}
-            <div className="reveal mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 lg:hidden">
+            <div className="reveal mt-8 grid grid-cols-1 gap-3 lg:hidden">
               {valueProps.map((vp) => {
                 const Icon = vp.icon
                 return (

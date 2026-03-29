@@ -68,7 +68,7 @@ export default function Footer() {
       >
         <span
           className="font-playfair font-bold text-foreground leading-none"
-          style={{ fontSize: 'clamp(80px, 18vw, 260px)', opacity: 0.04, letterSpacing: '-0.04em', lineHeight: 0.85 }}
+          style={{ fontSize: 'clamp(48px, 14vw, 260px)', opacity: 0.04, letterSpacing: '-0.04em', lineHeight: 0.85, maxWidth: '100%' }}
         >
           RBLAUNCH
         </span>
