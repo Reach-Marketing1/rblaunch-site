@@ -228,14 +228,10 @@ export default function Offer() {
           }}
         >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-foreground-faint mb-1">
-              Monthly Retainer
+            <p className="font-playfair text-2xl font-semibold text-foreground mb-1">
+              Ready to get started?
             </p>
-            <p className="font-playfair text-3xl font-semibold text-foreground">
-              $1,200 – $1,500
-              <span className="text-base font-sans font-normal text-foreground-muted ml-2">/ month</span>
-            </p>
-            <p className="text-sm text-foreground-muted mt-1 font-light">
+            <p className="text-sm text-foreground-muted font-light">
               Everything above included. No à la carte, no upsells.
             </p>
           </div>
