@@ -9,21 +9,18 @@ const steps = [
     number: '01',
     title: 'Setup Week',
     body: "I build everything out — Google Business Profile fully optimized, chatbot live, missed-call text-back active, referral system connected, content templates ready for your trade. You don't lift a finger.",
-    detail: 'Google Profile · Chatbot · Text-Back · Referral System',
   },
   {
     icon: Video,
     number: '02',
     title: 'Content Flow Starts',
     body: 'You film a 30–60 second clip on the job site. Send it to me. I write the caption, add the SEO, and post it to Facebook, Instagram, and Google. That\'s your entire job. I handle the rest.',
-    detail: 'Film → Send → Published. Done.',
   },
   {
     icon: PhoneIncoming,
     number: '03',
     title: 'The Phone Rings More',
     body: "Your Google profile climbs. Social following grows. Referrals come in through the system. Leads who call after hours get a text response within minutes. You close more jobs — without changing how you work.",
-    detail: 'More visibility · More calls · More booked jobs',
   },
 ]
 
@@ -109,15 +106,9 @@ export default function HowItWorks() {
                   <h3 className="font-playfair text-xl font-semibold text-foreground mb-3 leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-foreground-muted leading-relaxed font-light mb-5">
+                  <p className="text-sm text-foreground-muted leading-relaxed font-light">
                     {step.body}
                   </p>
-
-                  {/* Detail tag */}
-                  <div className="inline-flex items-center gap-1.5 bg-bg-alt rounded-full px-3 py-1.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span className="text-xs font-medium text-foreground-muted">{step.detail}</span>
-                  </div>
                 </div>
               </div>
             )
