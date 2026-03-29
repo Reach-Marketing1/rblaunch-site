@@ -32,14 +32,14 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1590579491624-f98f36d4c763?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&q=80"
           alt="Trade professional on the job site"
           className="w-full h-full object-cover object-center"
         />
         {/* Warm overlay — from bottom, covers ~70% */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#fafaf8] via-[rgba(250,250,248,0.72)] to-[rgba(250,250,248,0.15)]" />
-        {/* Subtle warm tint */}
-        <div className="absolute inset-0 bg-[rgba(240,235,227,0.18)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#fafaf8] via-[rgba(250,250,248,0.80)] to-[rgba(250,250,248,0.35)]" />
+        {/* Warm tint */}
+        <div className="absolute inset-0 bg-[rgba(240,235,227,0.25)]" />
       </div>
 
       {/* Content */}
@@ -57,7 +57,7 @@ export default function Hero() {
           <h1 className="blur-in-hero font-playfair text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.08] text-balance text-foreground mb-6">
             You run the jobs.{' '}
             <br />
-            <em className="text-primary not-italic">We keep the calls coming.</em>
+            <em className="text-primary italic">We keep the calls coming.</em>
           </h1>
 
           {/* Subheadline */}
