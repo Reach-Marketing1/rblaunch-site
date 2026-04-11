@@ -2,7 +2,7 @@
 
 ## What This Is
 
-RBLaunch is a marketing & ads agency that helps small businesses grow through paid advertising (Meta/Google) and SEO/organic growth strategies. The business is launching fresh and needs a professional web presence and social media footprint to attract clients and book discovery calls.
+RBLaunch is a marketing & ads agency that helps small businesses who are invisible online — businesses with no website, businesses that rely entirely on word of mouth, and business owners who know they're missing revenue but don't know where. RBLaunch finds those gaps and fills them through paid advertising (Meta/Google) and SEO/organic growth.
 
 ## Core Value
 
@@ -34,7 +34,7 @@ A small business owner lands on the page, immediately understands what RBLaunch 
 ## Context
 
 - Business type: Marketing & Ads agency (paid ads + SEO)
-- Target client: Small businesses wanting more leads/customers
+- Target client: Small businesses with no website OR businesses relying solely on word of mouth OR owners who sense they're missing revenue but can't identify where
 - Primary CTA: Book a free 30-minute strategy call
 - Logo provided: Horizontal (light + dark) and square icon variants — strictly black & white
 - Brand palette: Black (#000000), White (#FFFFFF), Deep Red (#E8232A), Dark Grey (#111111), Muted (#888888)
